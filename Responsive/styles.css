@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: beige;
+    font-size: 16px;
+}
+
+.main-container{
+    /* border: 1px solid blueviolet; */
+    width: 344px;
+    margin: 68px auto;
+    
+}
+@media(min-width: 600px){
+    .main-container{
+        width: 540px;
+    }
+}
+.balance{
+    background-color: coral;
+    height: 100px;
+    border-radius: 16px;
+    padding: 24px 20px;/*24 arriba y 20 a los lado*/
+    display: flex; /*para que se pongan los elementos uno al lado del otro en el contenedor*/
+    color: white;
+    margin-bottom: 16px;
+    justify-content: space-between;/*para que haya un espacio entre el logo y el My balance con el precio*/
+    
+}
+@media(min-width: 600px){
+   .balance{
+    height: 126px; /*Modificamos la altura del contenedor balance cuando llegue a 600px*/
+    
+   }
+    
+}
+
+.balance__title{
+    font-size: 0.7em;
+    margin-bottom: 6px;/*espacio entre palabras y el precio*/
+}
+
+@media(min-width:600){
+    .balance__title{
+        font-size: 2em;
+        margin-bottom: 12px;
+    }
+}
+
+.balance__total{
+    font-weight: 700;
+    font-size: 1.4em;
+}
+@media(min-width:600){
+    .balance__total{
+        font-size: 2em;
+        
+    }
+}
+.balance__logo{
+    width: 60px;/*modificamos el ancho del logo*/
+       
+}
+@media(min-width:600){
+    .balance__logo{
+        width: 85px;
+        height: 75px;
+    
+    }
+}
+.attribution{
+    text-align: center;
+}
+
+.chart{
+    background-color: white;
+    color:chocolate;
+    border-radius: 16px; 
+    height: 424px;
+    padding: 28px 20px;
+    
+    }
+.chart__title{
+    color:brown;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+.chart__bars-container{
+    height: 220px;/*Altura*/
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;/*que las barras se peguen al final*/
+    margin-bottom: 30px; /*margen para abajo*/
+    /*para que todas las barras tengan un espacio entre ellas*/
+}
+.chart__bar{
+    background-color: crimson;
+    width: 32px;
+    height: 200px;
+    border-radius: 4px;
+    position: relative;/*para que tome con el top del chart__--label los pixeles que le ponga parasepararlo*/
+  
+    }
+.chart__bar:hover{
+    cursor: pointer;
+    filter: brightness(1.2);/*Para trabajar sobre el brillo*/
+}    
+
+.chart__bar--label{
+    background-color: darkcyan;
+    color:blanchedalmond;
+    padding: 4px;
+    width: 38px;
+    font-size: 0.5em;
+    border-radius: 4px;
+    font-weight: 700;
+    position: absolute; /*para especificar su posición exacta con el TOP*/
+    top: -24px;
+    left: -4px;
+    display: none;/*para que esten ocultos los labels*/
+}
+.chart__bar--day{
+    position: absolute;
+    bottom: -16px;
+    font-size: 0.6em;
+    width: 32px;
+    text-align: center;
+}
+
+
